@@ -8,7 +8,7 @@ namespace Root_Simplifier
         static void Main()
         {
         A:
-            int exponent, multi = 0;
+            int exponent, multi = 0 , last_digit;
             double value;
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Root Simplifier 1.0");
@@ -54,16 +54,25 @@ namespace Root_Simplifier
             }
 
             value = value / Math.Pow(multi, exponent);
+            last_digit = exponent % 10;
 
-            if (exponent == 2)
+             switch(last_digit)
             {
-                Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "nd root of (" + "" + value + ")");
+                case 0:
+                    Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "th root of (" + "" + value + ")");
+                    break;
+                case 1:
+                    Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "st root of (" + "" + value + ")");
+                    break;
+                case 2:
+                    Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "nd root of (" + "" + value + ")");
+                    break;
+                case 3:
+                    Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "rd root of (" + "" + value + ")");
+                    break;
+
             }
-            else if (exponent == 3)
-            {
-                Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "rd root of (" + "" + value + ")");
-            }
-            else
+            if(last_digit >=4 && last_digit <= 9)
             {
                 Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "th root of (" + "" + value + ")");
             }
