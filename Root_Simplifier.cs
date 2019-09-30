@@ -86,7 +86,7 @@ namespace Root_Simplifier
                     {
                         if ((Math.Pow(multi, exponent)) == value * Math.Pow(multi, exponent))
                         {
-                            Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "th root of (" + "" + value + ") = " + multi);
+                            Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "th root of (" + "" + value + ") = " + multi + " / " + "-" + multi);
                         }
                         else
                         {
@@ -157,8 +157,8 @@ namespace Root_Simplifier
                      {
                          if ((Math.Pow(multi, exponent)) == value * Math.Pow(multi, exponent))
                          {
-                             Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "nd root of (" + "" + value + ") = " + multi);
-                         }
+                             Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "nd root of (" + "" + value + ") = " + multi + " / " + "-" + multi);
+                        }
                          else
                          {
                              Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "nd root of (" + "" + value + ")");
@@ -228,7 +228,7 @@ namespace Root_Simplifier
                 {
                     if ( (Math.Pow(multi,exponent)) == value * Math.Pow(multi, exponent))
                     {
-                       Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "th root of (" + "" + value + ") = " + multi);
+                       Console.WriteLine("Simplified expression = " + multi + " x " + exponent + "th root of (" + "" + value + ") = " + multi + " / " + "-" + multi);
                     }
                     else
                     {
